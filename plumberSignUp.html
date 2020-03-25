@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Plumber Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="website_style.css" />
+    <script src="jquery-3.4.1.js"></script>
+
+    <style type="text/css">
+        #page {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #page_wrapper {
+            padding-bottom: 100px;
+        }
+
+        .flex_container {
+            justify-content: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: space-between;
+        }
+
+        .flex_container>div {
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+        }
+
+        p.flex_head {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+
+    <script language='javascript'>
+
+        $(document).ready(function () {
+            $("#flex_container").fadeIn(1000);
+        });
+
+        $(document).ready(function () {
+                $("#motto").slideDown(1000);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="page">
+        <div id="page_wrapper">
+            <h1>Sign Up</h1>
+            <h2 id="motto" style="display:none">Clean and Simple</h2>
+            <a name="top"></a>
+
+            <div class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="questionaire.html">Appointments</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="im.html">Messaging</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="plumberpage.html">Plumbers</a></li>
+            </div>
+
+
+            <form name="from1" onsubmit="return validate()">
+                <div class='flex_container' id='flex_container' style="display: none">
+
+                    <div>
+                        <p class="flex_head"><strong>Basic Info:</strong></p>
+                        <p>First Name: &nbsp; &nbsp;<input type="text" name='fname' id='fname' /></p>
+                        <p>Last Name:* &nbsp;<input type="text" name='lname' id='lname' /></p>
+
+                    </div>
+
+                    <div>
+                        <p class="flex_head"><strong>Contact Info:</strong></p>
+                        <p>Street:* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='street' id='street' /></p>
+                        <p>City:* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name='city' id='city' /></p>
+                        <p>Zip Code:* <input type="text" name='zip' id='zip' /></p>
+                        <p>Phone:* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='phone' id='phone' /></p>
+                        <p>Email: &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='email' id='email' /> </p>
+                    </div>
+                
+
+                <div>
+                    <p class="flex_head"><strong>Credentials:</strong></p>
+                    <label for='myfile'>Upload a picture of your plumbing certificate:</label>
+                    <input type='file' id='myfile' name='myfile'>
+                </div>
+
+                <div>
+                    <p class="flex_head"><strong>Account Details:</strong></p>
+                    <p>Username:* <input type="text" name='usr' id='usr' /></p>
+                    <label for="pwd">Password:*</label>
+                    <input type="password" id="pwd" name="pwd" minlength="7"><br><br>
+
+                    <label for="c_pwd">Confirm Password:*</label>
+                    <input type="password" id="c_pwd" name="c_pwd" minlength="7"><br><br>
+                </div>
+            </div>
+                <input type="submit" value="Submit" />
+                <input type="reset">
+            </form>
+
+
+        </div>
+	<footer>
+		Plumber Chat<br>
+		Address: 288 Boston Ave, Medford, MA, 02155<br>
+		Phone Number: 617-PLM-CHAT<br>
+		Email: plumberchat@gmail.com
+		We offer top plumbing services on a highly efficient platform<br>
+		Follow us on Linkedin!
+	</footer>
+    </div>
+</body>
+
+<script language='javascript'>
+
+    lname = document.getElementById("lname");
+    street = document.getElementById("street");
+    city = document.getElementById("city");
+    phone = document.getElementById("phone");
+    zip = document.getElementById("zip");
+    pwd = document.getElementById("pwd");
+    c_pwd = document.getElementById("c_pwd");
+    usr = document.getElementById("usr");
+
+    // checks to see if certain fields are empty
+    function check_empty_fields() {
+        if (lname.value == "") {
+            alert("You must enter a lastname to continue.");
+            lname.focus();
+            return false;
+        } else if (street.value == "") {
+            alert("You must enter a street to continue.")
+            street.focus();
+            return false;
+        } else if (city.value == "") {
+            alert("You must enter a city to continue.")
+            city.focus();
+            return false;
+        } else if (phone.value == "") {
+            alert("You must enter a phone number to continue.")
+            phone.focus();
+            return false;
+        } else if (zip.value == "") {
+            alert("You must enter a zip code to continue.")
+            zip.focus();
+            return false;
+        } else if (usr.value == "") {
+            alert("You must enter a username to continue.")
+            usr.focus();
+            return false;
+        } else if (pwd.value == "") {
+            alert("You must enter a password to continue.")
+            pwd.focus();
+            return false;
+        } else if (c_pwd.value == "") {
+            alert("You must enter a confimation password to continue.")
+            c_pwd.focus();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function valid_zip() {
+        var reg = /^[0-9]{5}$/
+
+        if (!reg.test(zip.value)) {
+            alert("Zip code is invalid. Try: xxxx");
+            zip.focus();
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
+    function valid_pwd() {
+        if (pwd.value != c_pwd.value) {
+            alert("Passwords do not match.");
+            c_pwd.focus();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // validates phone number
+    function valid_phone() {
+        /*
+		 * To check the phone number we use a regular expression.
+		 * ^: makes sure that we start our evaluation of the regular expression
+		 * 	  at the beginning of the string
+		 * [(]?: Says the string is valid if it has 0 or 1 "(" at the 
+		 * 	     beginning of the string (used again for ")")
+		 * [0-9]{3}: Says the string is valid as long as it has 3 digits (0-9)
+		 * 			 following the previous expression (used twice)
+		 * [-]?: Says the string is valid if it has 0 or 1 "-" following the 
+		 * 		 previous expression (used multiple times throughout)
+		 * [0-9]{4}: Says the string is valid as long as we have 4 digits 
+		 * 		     following the previous expression
+		 * $: makes sure that our evaluation of the regular expression ends 
+		 * 	  at the end of the string
+		 * Valid Formats:
+		 * 617-544-0095		(617)5440095	(617)-544-0095
+		 * 6175440095		(6175440095		....(any combination of the above)
+		 * (617)544-0095	617)5440095
+		*/
+        var reg = /^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}$/;
+
+        if (!reg.test(phone.value)) {
+            alert("Phone number is invalid. Try: xxx-xxx-xxxx");
+            phone.focus();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // makes sure form entries are valid
+    function validate() {
+        if (!check_empty_fields()) {
+            return false;
+        }
+
+        if (!valid_phone()) {
+            return false;
+        }
+
+        if (!valid_zip()) {
+            return false;
+        }
+
+        if (!valid_pwd()) {
+            return false;
+        }
+
+        alert("Thank you for making an account!")
+
+        return true;
+    }
+
+
+</script>
+
+</html>
