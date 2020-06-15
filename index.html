@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset= "utf-8">
+
+	<title>Home</title>
 	
 	<link rel="stylesheet" type="text/css" href= "website_style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,16 +14,12 @@
 			width: 100vw;
 		}
 
-		#image {
-			max-height: 400px;
-			overflow: hidden;
-		}
-
 		div#subtitle {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 30px;
 			font-weight: bold;
 			text-align: center;
+
 		}
 
 		p.desc {
@@ -30,15 +28,20 @@
 		}
 
 		.button {
-  			background-color: #0DAEFF;
-  			border: none;
-  			color: white;
-  			padding: 20px 40px;
   			text-align: center;
   			text-decoration: none;
-  			display: inline-block;
-			font-size: 25px;
+			display: inline-block;
+			  
+			font-size: 20px;
 			margin: 0;
+
+			padding: 11px 25px;
+   			background-color: rgba(0, 116, 183, 1);
+    		border: none;
+    		border-radius: 50px;
+    		cursor: pointer;
+    		transition: all 0.3 ease 0s;
+    		color: #ffffff;
 
 			
 		}
@@ -55,6 +58,15 @@
 		div.desc_title {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 20px;
+			text-align: center;
+			color: #003B73;
+		}
+
+		p.desc {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			text-align: center;
+			color: #003B73;
 		}
 
 		.flex_container {
@@ -67,9 +79,37 @@
 
     	.flex_container > div {
        		width: 450px;
-        	margin-right: 10px;
-    	}
+			margin-right: 10px;
+			margin: 20px;
+		}
 
+		body, html {
+    		height: 100%;
+		}
+
+
+	.hero-image {
+  		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/samuel-sianipar-scUBcasSvbE-unsplash.jpg");
+  		height: 50%;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		position: relative;
+	}
+
+	.hero-text {
+  		text-align: center;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	h1 {
+		background-color: rgba(0, 0, 0, 0);
+		color: #BFD7ED;
+	}
 	</style>
 
 
@@ -101,35 +141,40 @@
 
 
 <body bgcolor= "#ffffff"; >
-	<h1>Plumber Chat</h1>
-	<h2 id="motto" style="display:none">Clean and Simple</h2>
+	<header>
+				<img class="logo" src="logos/logo6.png" alt="logo">
+				<nav>
+					<ul class="nav__links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="questionaire.html">Appointments</a></li>
+						<li><a href="prices.html">Prices</a></li>
+						<li><a href="plumberpage.html">Our Plumbers</a></li>
+					</ul>
+				</nav>
+				<a class="cta" href="login.html"> <button>Login</button></a>
+	</header>
 
-	<div class="navbar">
-    		<li><a href="index.html">Home</a></li>
-    		<li><a href="about.html">About</a></li>
-    		<li><a href="questionaire.html">Appointments</a></li>
-    		<li><a href="prices.html">Prices</a></li>
-    		<li><a href="im.html">Messaging</a></li>
-    		<li><a href="login.html">Login</a></li>
-    		<li><a href="plumberpage.html">Plumbers</a></li>
-  	</div>
-
-	<div id="image" style="display:none"><img src="samuel-sianipar-scUBcasSvbE-unsplash.jpg" alt="Photo by Samuel Sianipar on Unsplash"></div>
-</br>
-</br>
-
-
+	<div class="hero-image" style="display:none" id="image">
+		<div class="hero-text">
+			<h1>Plumber Pages</h1>
+		</div>
+	</div>
 	
+	</br>
+	</br>
+	<h2> Finding A Plumber Near You</h2>
 
-	<div id='subtitle' style="display:none"> Plumbing without the hassle</div>
 
 </br>
 </br>
 
 	<div id='buttons' style="display:none">
 		<a href="clientSignUp.html" class="button">Client Sign Up</a>
+		&nbsp; &nbsp;
 		<a href="plumberSignUp.html" class="button">Plumber Sign Up</a>
 	</div>
+
 
 
 </br>
@@ -155,14 +200,54 @@
 </div>
 </br>
 </br>
-	<footer>
-		Plumber Chat<br>
-		Address: 288 Boston Ave, Medford, MA, 02155<br>
-		Phone Number: 617-PLM-CHAT<br>
-		Email: plumberchat@gmail.com
-		We offer top plumbing services on a highly efficient platform<br>
-		Follow us on Linkedin!
-	</footer>
+
+
+
+
+		<footer class="footer-distributed">
+		
+			<div class="footer-left">
+				<h4>Plumber Pages</h4>
+		
+				<p class="footer-links" style="font-size: 16px">
+					<a href="index.html">Home</a>
+					|
+					<a href="about.html">About</a>
+					|
+					<a href="questionaire.html">Appointments</a>
+					|
+					<a href="prices.html">Prices</a>
+					|
+					<a href="plumberpage.html">Our Plumbers</a>
+				</p>
+		
+				<p class="footer-company-name">© PlumberPages.com</p>
+			</div>
+		
+		
+		
+			<div class="footer-center">
+				<div class="geninfo">
+					<p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+				</div>
+			</br>
+		
+				<div class="geninfo">
+					<p>Phone Number: 617-PLUM-PAGE</p>
+				</div>
+				</br>
+				<div class="geninfo">
+					<p>Email: plumberPages@business.com</p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					We connect you with nearby plumbers!</p>
+				<div class="social-media">
+					Follow us on Facebook, Instagram, and Twitter!
+				</div>
+			</div>
+		</footer>
 
 </body>
 </html>

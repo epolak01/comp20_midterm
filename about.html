@@ -6,53 +6,171 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="jquery-3.4.1.js"></script>
 		<style type="text/css">
+			/*
+				Photo by pan xiaozhen on Unsplash
+
+				Photo by jesse orrico on Unsplash
+
+				Photo by tian kuan on Unsplash
+
+				Photo by Bruce Warrington on Unsplash
+
+				Photo by Tania Melnyczuk on Unsplash
+
+				Photo by August Phlieger on Unsplash
+
+				Photo by Chris Arthur-Collins on Unsplash
+
+				Photo by Xavier Wateva on Unsplash
+
+				Photo by Subhash Nusetti on Unsplash
+
+				Photo by Imani on Unsplash
+
+				Photo by Cytonn Photography on Unsplash
+
+				Photo by NordWood Themes on Unsplash
+
+				Photo by Austin Distel on Unsplash
+
+				Photo by bantersnaps on Unsplash
+
+				Photo by Perry Grone on Unsplash
+
+				Photo by Bill Oxford on Unsplash
+
+				Photo by Xavier von Erlach on Unsplash
+
+				Photo by Jonathan Borba on Unsplash
+
+				Photo by ONNE Beauty on Unsplash
+
+				Photo by Bence Balla-Schottner on Unsplash
+
+				Photo by Paweł Czerwiński on Unsplash
+
+				Photo by Bence Balla-Schottner on Unsplash
+
+				Photo by Noah Usry on Unsplash
+
+				Photo by Chandler Cruttenden on Unsplash
+			*/
+
+			img {
+				width: 100vw;
+			}
 			h3 {
             text-align: left;
             font-size: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
             margin-left: 20px;
-        }
+			}
+			
+			
+
 			p {
-				text-align:left;
-				font-size: 15px;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				background-color: #0DAEFF;
-				padding-left: 30px;
-				padding: 20px;
 				font-family: Arial, Helvetica, sans-serif;
-				font-size: 17px;
+				font-size: 18px;
+				color: #003B73;
 			}
 			
-			h4 {
-				padding-top: 5px;
-				padding-bottom: 1px;
-				background-color: #0DAEFF;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 20px;
+			.testimonials {
+				justify-content: center;
+        		display: flex;
+        		flex-wrap: wrap;
+        		align-items: flex-start;
+        		align-content: space-between;
 			}
-			
-			h3{
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 30px;
-				font-weight: bold;
+
+			.testimonials > div {
+        		width: 450px;
+        		margin-right: 10px;
+        		padding: 20px 30px;
+    		}
+
+			img.client {
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
 			}
-			
-		.testimonials {
-			display:grid;
-			grid-template-columns: 230px 230px 230px;
-			align-content:center;
-			background-color: #0DAEFF;
-			padding-top: 5px;
-			padding-left: 5px;
-		}
-		
-		testimonials {
-			background-color: #0DAEFF;
-		}
-		
-		
+
+			img.aboutimg {
+				width: 500px;
+				height: 300px;
+			}
+
+			p.clientContent {
+				justify-content: center;
+			}
+
+			p.cont  {
+				justify-content: left;
+				margin-right: 25%;
+				margin-left: 25%;
+			}
+
+			div.hero-image {
+  				background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/samuel-sianipar-scUBcasSvbE-unsplash.jpg");
+  				height: 50%;
+  				background-position: center;
+  				background-repeat: no-repeat;
+  				background-size: cover;
+  				position: relative;
+			}
+
+			.hero-text {
+  				text-align: center;
+  				position: absolute;
+  				top: 50%;
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+				background-color: rgba(0, 0, 0, 0);
+			}
+
+			#hero {
+				background-color: rgba(0, 0, 0, 0);
+				color: #BFD7ED;
+			}
+
+			body, html {
+    			height: 100%;
+			}
+
+			.aboutus {
+        		justify-content: flex-start;
+				display: flex;
+        		flex-wrap: wrap;
+        		align-items: center;
+        		align-content: flex-start;
+    		}
+
+    		.aboutus > div {
+       			width: 575px;
+				margin-right: 10px;
+				margin: 20px;
+			}
+
+			h1.abouth1 {
+				text-align: left;
+				padding-bottom: 20px;
+			}
+
+			.whywhere {
+				justify-content: flex-start;
+				display: flex;
+        		flex-wrap: wrap;
+        		align-items: flex-start;
+        		align-content: flex-start;
+			}
+
+			.whywhere > div {
+       			width: 575px;
+				margin-right: 10px;
+				margin: 20px;
+			}
+
+
 	</style>
 
 		<script language='javascript'>
@@ -63,55 +181,96 @@
 
 			$(document).ready(function () {
 				$("#motto").slideDown(1000);
+
+			});
+
+			$(document).ready(function () {
+					$("#image").slideDown(1500);
 			});
 		</script>
 	</head>
 	
-	<bodybgcolor= "#ffffff"; >
-	<h1>Plumber Chat</h1>
-	<h2 id='motto' style="display: none">Clean and Simple</h2>
+	<body>
+	<header>
+		<img class="logo" src="logos/logo6.png" alt="logo">
+		<nav>
+			<ul class="nav__links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="questionaire.html">Appointments</a></li>
+				<li><a href="prices.html">Prices</a></li>
+				<li><a href="plumberpage.html">Our Plumbers</a></li>
+			</ul>
+		</nav>
+		<a class="cta" href="login.html"> <button>Login</button></a>
+	</header>
 
-	<div class="navbar">
-    		<li><a href="index.html">Home</a></li>
-    		<li><a href="about.html">About</a></li>
-    		<li><a href="questionaire.html">Appointments</a></li>
-    		<li><a href="prices.html">Prices</a></li>
-    		<li><a href="im.html">Messaging</a></li>
-    		<li><a href="login.html">Login</a></li>
-    		<li><a href="plumberpage.html">Plumbers</a></li>
-  	</div>
+	<div class="hero-image" id="image" style="display: none">
+		<div class="hero-text">
+			<h1 id="hero">About Us</h1>
+		</div>
+	</div>
+
+	</br>
 		
 	<div id="container" style="display: none">
 	<div class="aboutus">
-		<h3>About Us:</h3>
-		<p>Plumber Chat is the Plumbing based service that hassle free connects plumbers with their clients! No more searching through local listings or asking your neighbor for a reccomendation.
-Plumber Chat puts the power to plumb your pipes in the palms of your hands!</p>
-	</div>
-	<h3>Why Plumber Chat?</h3>
-
-	<div class="whyplumber" style="background-color: #0DAEFF; padding-top:1px;padding-bottom:1px;padding-left:30px">
-		<h4>- Easy to Use</h4>
-		<p>Our Plumber Chat website allows for a quick and easy way for you to diagnose the issue and schedule an appointment with one of our trusted associated plumbers.</p>
-		<h4>- Guarenteed Quality</h4>	
-		<p>All Plumbers on Plumber Chat are pre-vetted, licensed and guarenteed to deliver quality service at excellent prices.</p>
-		<h4>- Better for both Sides</h4>
-		<p>It's the fast and easy way for you to get your sink fixed quick. But it's also great for our plumbers! Giving them more opportunities to connect with a large number of clients.</p> 
-	</div>
+		<div> <img src="images/austin-distel-wD1LRb9OeEo-unsplash.jpg" class="aboutimg"></div>
+		
+		<div>
+			<h1 class="abouth1">What is PlumberPages?</h1>
+			<p>PlumberPages is the Plumbing based service that hassle free connects plumbers with their clients! No more searching through local listings or asking your neighbor for a reccomendation. PlumberPages puts the power to plumb your pipes in the palms of your hands!</p>
 	
-	<div class="beggining">
-			<h3>Where We Started:</h3>
-			<p style="text-align:left;text-align-last:left">Plumber Chat was started by Plumber Company and Co. in 2020 at the request of an employees uncle. The dream was born and ever since Plumber Chat has been making it easy for people everywhere to get their pipes cleaned!</p>
+		</div>
 	</div>
+</br>
+</br>
 
-	<h3>Testimonials:<h3>
+		<div class="whywhere">
+			<div>
+				<h1 class="abouth1">Why PlumberPages?</h1>
+				<h4>Easy to Use</h4>
+				<p>Our PlumberPages website allows for a quick and easy way for you to diagnose the issue and schedule an appointment
+					with one of our trusted associated plumbers.</p>
+				<h4>Guarenteed Quality</h4>
+				<p>All Plumbers on PlumberPages are pre-vetted, licensed and guarenteed to deliver quality service at excellent prices.
+				</p>
+				<h4>Better for both Sides</h4>
+				<p>It's the fast and easy way for you to get your sink fixed quick. But it's also great for our plumbers! Giving them
+					more opportunities to connect with a large number of clients.</p>
+	
+			</div>
+			
+			<div>
+				<h1 class="abouth1">How did PlumberPages Start?</h1>
+				<div class="beggining">
+					<p style="text-align:left;text-align-last:left">PlumberPages was started by Plumber Company and Co. in 2020 at the
+						request of an employees uncle. The dream was born and ever since PlumberPages has been making it easy for people
+						everywhere to get their pipes cleaned!</p>
+				</div>
+			</div>
+		</div>
+		</br>
+		</br>
+
+	<h1>Testimonials:<h1>
 	<div class="testimonials">
-		<div class="pic1"><img src="yucel.jpg" width="213" height="320"></div>
-		<div class="pic2"><img src="christopher.jpg" width="213" height="320"></div>
-		<div class="pic3"><img src="harishan.jpg" width="213" height="320"></div>
-		<div class="test1"><p style="center:justify">Plumber Chat lets me ensure everything flushes properly at my business without causing me any worry! - Yucel Dragunov</p></div>
-		<div class="test2"><p style="center:justify">Plumber Chat is easy to use. Before I had to work and find a plumber. I love it! - Chrissy Kringle</p></div>
-		<div class="test3"><p style="center:justify">Now I don't have to worry about long phonecalls just to plan a visit. Thanks Plumber Chat! - Greg Gregerson</p></div>
-	
+		<div>
+			<img src="clientPics/yucel.jpg" class=client>
+			<p class="clientContent">PlumberPages lets me ensure everything flushes properly at my business without causing me any
+				worry! - Yucel Dragunov</p>
+		</div>
+
+		<div>
+			<img src="clientPics/christopher.jpg" class=client>
+			<p class="clientContent">PlumberPages is easy to use. Before I had to work and find a plumber. I love it! - Chrissy
+				Kringle</p>
+		</div>
+		<div>
+			<img src="clientPics/harishan.jpg" class=client>
+			<p class="clientContent">Now I don't have to worry about long phonecalls just to plan a visit. Thanks PlumberPages! -
+				Greg Gregerson</p>
+		</div>
 	</div>
 	<br>
 	<br>
@@ -120,13 +279,49 @@ Plumber Chat puts the power to plumb your pipes in the palms of your hands!</p>
 	
 	
 	
-	<footer>
-		Plumber Chat<br>
-		Address: 288 Boston Ave, Medford, MA, 02155<br>
-		Phone Number: 617-PLM-CHAT<br>
-		Email: plumberchat@gmail.com
-		We offer top plumbing services on a highly efficient platform<br>
-		Follow us on Linkedin!
+	<footer class="footer-distributed">
+	
+		<div class="footer-left">
+			<h4>Plumber Pages</h4>
+	
+			<p class="footer-links" style="font-size: 16px">
+				<a href="index.html">Home</a>
+				|
+				<a href="about.html">About</a>
+				|
+				<a href="questionaire.html">Appointments</a>
+				|
+				<a href="prices.html">Prices</a>
+				|
+				<a href="plumberpage.html">Our Plumbers</a>
+			</p>
+	
+			<p class="footer-company-name">© PlumberPages.com</p>
+		</div>
+	
+	
+	
+		<div class="footer-center">
+			<div class="geninfo">
+				<p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+			</div>
+			</br>
+	
+			<div class="geninfo">
+				<p>Phone Number: 617-PLUM-PAGE</p>
+			</div>
+			</br>
+			<div class="geninfo">
+				<p>Email: plumberPages@business.com</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<p class="footer-company-about">
+				We connect you with nearby plumbers!</p>
+			<div class="social-media">
+				Follow us on Facebook, Instagram, and Twitter!
+			</div>
+		</div>
 	</footer>
 
 

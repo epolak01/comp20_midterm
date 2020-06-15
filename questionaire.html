@@ -9,15 +9,6 @@
 
     <style type="text/css">
 
-    #page {
-        position: relative;
-        min-height: 100vh;
-    }
-
-    #page_wrapper {
-        padding-bottom: 200px;
-    }
-
     .flex_container {
         justify-content: flex-start;
         display: flex;
@@ -29,19 +20,18 @@
     .flex_container > div {
         width: 450px;
         margin-right: 10px;
+        padding: 20px 30px;
     }
 
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
+    p {
+            padding-bottom: 5px;
     }
 
     p.flex_head {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
     }
+
     </style>
 
     <script language='javascript'>
@@ -58,21 +48,25 @@
 </head>
 
 <body>
-    <div id="page">
-    <div id="page_wrapper">
+    
+    <header>
+        <img class="logo" src="logos/logo6.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="questionaire.html">Appointments</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="plumberpage.html">Our Plumbers</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="login.html"> <button>Login</button></a>
+    </header>
     <h1>Schedule an Appointment</h1>
-    <h2 id="motto" style="display:none">Clean and Simple</h2>
     <a name="top"></a>
 
-    <div class="navbar">
-    	<li><a href="index.html">Home</a></li>
-    	<li><a href="about.html">About</a></li>
-    	<li><a href="questionaire.html">Appointments</a></li>
-    	<li><a href="prices.html">Prices</a></li>
-    	<li><a href="im.html">Messaging</a></li>
-    	<li><a href="login.html">Login</a></li>
-   	<li><a href="plumberpage.html">Plumbers</a></li>
-    </div>
+    </br>
+    </br>
 
 
     <form name="from1" onsubmit= "return validate()">
@@ -101,10 +95,10 @@
     <div>
         <p class="flex_head"><strong>Where is your issue?</strong></p>
         <p>
-            <input type="radio" name="where" value="residence" checked="checked"/>Residence 
-            <input type="radio" name='where' value='commercial' />Commercial 
-            <input type="radio" name='where' value='industrial' />Industrial 
-            <input type="radio" name='where' value='other' />Other: 
+            <input type="radio" name="where" value="residence" checked="checked"/> &nbsp; Residence 
+            <input type="radio" name='where' value='commercial' />&nbsp; Commercial 
+            <input type="radio" name='where' value='industrial' />&nbsp; Industrial 
+            <input type="radio" name='where' value='other' />&nbsp; Other: 
         </p>
 
         <p>
@@ -124,12 +118,11 @@
     <div>
         <p class="flex_head"><strong>How quickly does your issue need to be fixed?</strong></p>
         <p>
-            <input type="radio" name="urgent" value="2weeks" checked="checked" />2 weeks
-            <input type="radio" name='urgent' value='1week' />1 week
-            <input type="radio" name='urgent' value='3-4days' />3-4 days
-            <input type="radio" name='urgent' value='1-2 days' />1-2 days
-            <input type="radio" name='urgent' value='24hrs' />24 hours
-            <input type="radio" name='urgent' value='asap' /> ASAP
+            <input type="radio" name="urgent" value="2weeks" checked="checked" />&nbsp;2 weeks
+            <input type="radio" name='urgent' value='1week' />&nbsp;1 week
+            <input type="radio" name='urgent' value='3-4days' />&nbsp;3-4 days
+            <input type="radio" name='urgent' value='24hrs' />&nbsp;1-2 days
+            <input type="radio" name='urgent' value='asap' />&nbsp;ASAP
         </p>
     </div>
 
@@ -301,18 +294,52 @@
     </div>
 
 
-    </div>
     </form>
-    </div>
 
-	<footer>
-		Plumber Chat<br>
-		Address: 288 Boston Ave, Medford, MA, 02155<br>
-		Phone Number: 617-PLM-CHAT<br>
-		Email: plumberchat@gmail.com
-		We offer top plumbing services on a highly efficient platform<br>
-		Follow us on Linkedin!
-	</footer>
+    <footer class="footer-distributed">
+    
+        <div class="footer-left">
+            <h4>Plumber Pages</h4>
+    
+            <p class="footer-links" style="font-size: 16px">
+                <a href="index.html">Home</a>
+                |
+                <a href="about.html">About</a>
+                |
+                <a href="questionaire.html">Appointments</a>
+                |
+                <a href="prices.html">Prices</a>
+                |
+                <a href="plumberpage.html">Our Plumbers</a>
+            </p>
+    
+            <p class="footer-company-name">© PlumberPages.com</p>
+        </div>
+    
+    
+    
+        <div class="footer-center">
+            <div class="geninfo">
+                <p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+            </div>
+            </br>
+    
+            <div class="geninfo">
+                <p>Phone Number: 617-PLUM-PAGE</p>
+            </div>
+            </br>
+            <div class="geninfo">
+                <p>Email: plumberPages@business.com</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                We connect you with nearby plumbers!</p>
+            <div class="social-media">
+                Follow us on Facebook, Instagram, and Twitter!
+            </div>
+        </div>
+    </footer>
     </div>
 </body>
 

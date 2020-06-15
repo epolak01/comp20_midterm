@@ -37,27 +37,6 @@ input[type=text], input[type=password] {
 			color: white;
 		}
 
-button {
-  background-color: #0DAEFF;
-  			border: black solid 1px;
-  			color: white;
-  			padding: 20px 40px;
-  			text-align: center;
-  			text-decoration: none;
-  			display: inline-block;
-			font-size: 25px;
-			margin: 0;
-			font-family: Arial, Helvetica, sans-serif;
-}
-.button:hover {
-  			background-color: #0088cc; /* Green */
-			color: white;
-		}
-
-button:hover {
-  opacity: 0.8;
-}
-
 .pick {
 	text-align: center;
 	margin: 10px;
@@ -172,17 +151,18 @@ img.avatar {
 	</script>
 </head>
 <body bgcolor= "#ffffff";>
-	<h1>Plumber Chat</h1>
-	<h2 id="motto" style="display:none">Clean and Simple</h2>
-    	<div class="navbar">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="questionaire.html">Appointments</a></li>
-		<li><a href="prices.html">Prices</a></li>
-		<li><a href="im.html">Messaging</a></li>
-		<li><a href="login.html">Login</a></li>
-		<li><a href="plumberpage.html">Plumbers</a></li>
-    	</div>
+    <header>
+        <img class="logo" src="logos/logo6.png" alt="logo">
+        <nav>
+          <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="questionaire.html">Appointments</a></li>
+            <li><a href="plumberpage.html">Our Plumbers</a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="login.html"> <button>Login</button></a>
+      </header>
 
 <br>
 <br>
@@ -248,14 +228,50 @@ img.avatar {
 </div>
 	<br>
 	<br>
-	<footer>
-		Plumber Chat<br>
-		Address: 288 Boston Ave, Medford, MA, 02155<br>
-		Phone Number: 617-PLM-CHAT<br>
-		Email: plumberchat@gmail.com
-		We offer top plumbing services on a highly efficient platform<br>
-		Follow us on Linkedin!
-	</footer>
+  <footer class="footer-distributed">
+  
+    <div class="footer-left">
+      <h4>Plumber Pages</h4>
+  
+      <p class="footer-links" style="font-size: 16px">
+        <a href="index.html">Home</a>
+        |
+        <a href="about.html">About</a>
+        |
+        <a href="questionaire.html">Appointments</a>
+        |
+        <a href="prices.html">Prices</a>
+        |
+        <a href="plumberpage.html">Our Plumbers</a>
+      </p>
+  
+      <p class="footer-company-name">© PlumberPages.com</p>
+    </div>
+  
+  
+  
+    <div class="footer-center">
+      <div class="geninfo">
+        <p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+      </div>
+      </br>
+  
+      <div class="geninfo">
+        <p>Phone Number: 617-PLUM-PAGE</p>
+      </div>
+      </br>
+      <div class="geninfo">
+        <p>Email: plumberPages@business.com</p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        We connect you with nearby plumbers!</p>
+      <div class="social-media">
+        Follow us on Facebook, Instagram, and Twitter!
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

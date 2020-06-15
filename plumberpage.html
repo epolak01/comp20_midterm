@@ -7,6 +7,20 @@
 	<style type="text/css">
   /*table for plumber page*/
 
+  .flex_container {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+
+    .flex_container > div {
+        width: 450px;
+        margin-right: 10px;
+        padding: 20px 30px;
+    }
+
 div.picture {
     display: block;
     width: 400px;
@@ -27,12 +41,17 @@ div.desc {
 
 .descriptionList {
     font-size: 20px;
-    list-style-type: circle;
+    list-style-type: none;
 }
 
 .plumberPara {
     font-size: 20px;
 }
+
+div#why {
+	text-align: center;
+}
+
 
 </style>
 
@@ -73,95 +92,149 @@ div.desc {
 
 </head>
 
-<body bgcolor= "#ffffff"; >
+<body>
 
-<h1>Plumber Chat</h1>
- <h2 id="motto" style="display:none">Clean and Simple</h2>
-
-  <div class="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="questionaire.html">Appointments</a></li>
-    <li><a href="prices.html">Prices</a></li>
-    <li><a href="im.html">Messaging</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="plumberpage.html">Plumbers</a></li>
-  </div>
+	<header>
+		<img class="logo" src="logos/logo6.png" alt="logo">
+		<nav>
+			<ul class="nav__links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="questionaire.html">Appointments</a></li>
+				<li><a href="prices.html">Prices</a></li>
+				<li><a href="plumberpage.html">Our Plumbers</a></li>
+			</ul>
+		</nav>
+		<a class="cta" href="login.html"> <button>Login</button></a>
+	</header>
 	
 	<h1>Meet our Plumbers</h1>
 
-	<table style="width:100%; text-align:center">
-	<tr>
+	<div class='flex_container' id='flex_container' style="display:none">
 
-	<td>
-	<div id="div1" class="picture" style="display:none">
-  		<a target="_blank" href="plumber1.jpg">
-    		<img src="plumber1.jpg" width="500px" height="400px">
-  		</a>
-  		<div class="desc">
-  		<ul class="descriptionList">
-  			<li><b>Jonathan Smith</b></li>
-  			<li>7 years of experience</li>
-        <li>Certified plumber</li>
-  			<li>Specializes in bathtub repair</li>
-  		</ul>
-      Hi! I'm Jonathan, and I'm more than happy to aid you in your bathtub repair and do it with great customer service. I can do it as good as the best!
-  		</div>
+		<div>
+			<div id="div1" class="picture" style="display:none">
+				<a target="_blank" href="plumberPics/plumber1.jpg">
+					<img src="plumberPics/plumber1.jpg" width="500px" height="400px">
+				</a>
+				<div class="desc">
+					<ul class="descriptionList">
+						<li><b>Jonathan Smith</b></li>
+						<li>7 years of experience</li>
+						<li>Certified plumber</li>
+						<li>Specializes in bathtub repair</li>
+					</ul>
+					Hi! I'm Jonathan, and I'm more than happy to aid you in your bathtub repair and do it with great customer
+					service. I can do it as good as the best!
+				</div>
+			</div>
+
+		</div>
+
+		<div>
+			<div id="div2" class="picture" style="display:none">
+				<a target="_blank" href="plumberPics/plumber2.png">
+					<img src="plumberPics/plumber2.png" width="500px" height="400px">
+				</a>
+				<div class="desc">
+					<ul class="descriptionList">
+						<li><b>Frank Miller</b></li>
+						<li>13 years of experience</li>
+						<li>Master plumber</li>
+						<li>Specializes in sink repair</li>
+					</ul>
+					My names Frank and I have been fixing leaky faucets for years better than anyone else can do it. I'm as
+					passionate about repairing your sink as I am about the Pats!
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div id="div3" class="picture" style="display:none">
+				<a target="_blank" href="plumberPics/plumber3.jpg">
+					<img src="plumberPics/plumber3.jpg" width="500px" height="400px">
+				</a>
+				<div class="desc">
+					<ul class="descriptionList">
+						<li><b>Alex Romanoff</b></li>
+						<li>20 years of experience</li>
+						<li>Master plumber</li>
+						<li>Great at everything</li>
+					</ul>
+					I'm Alex, and I've been plumbing as long as I can remember. You've got a piping problem? I'm your guy. I can fix
+					anything, and I'm happy to do it!
+				</div>
+			</div>
+		</div>
 	</div>
-	</td>
 
-	<td>
-	<div id="div2" class="picture" style="display:none">
-  		<a target="_blank" href="plumber2.png">
-    		<img src="plumber2.png" width="500px" height="400px">
-  		</a>
-  		<div class="desc">
-  		<ul class="descriptionList">
-  			<li><b>Frank Miller</b></li>
-  			<li>13 years of experience</li>
-  			<li>Master plumber</li>
-  			<li>Specializes in sink repair</li>
-  		</ul>	
-      My names Frank and I have been fixing leaky faucets for years better than anyone else can do it. I'm as passionate about repairing your sink as I am about the Pats!
-  		</div>
+
+</br>
+</br>
+
+	<h1>Why Choose PlumberPages?</h1>
+</br>
+	<div id="why">
+		<ul>
+			<li>All of our plumbers have their NCCER Certification and are Journey Level Pipefitters and Steamfitters.</li>
+			<li>All of our plumbers have passed their UPC Journeyman Plumber test.</li>
+			<li>We have made it on Angie's List for 3 consecutive years for exellency in plumbing</li>
+			<li>We have 4.6 stars on Yelp!</li>
+		</ul>
 	</div>
-	</td>	
-
-	<td>
-	<div id="div3" class="picture" style="display:none">
-  		<a target="_blank" href="plumber3.jpg">
-    		<img src="plumber3.jpg" width="500px" height="400px">
-  		</a>
-  		<div class="desc">
-  		<ul class="descriptionList">
-  			<li><b>Alex Romanoff</b></li>
-  			<li>20 years of experience</li>
-  			<li>Master plumber</li>
-  			<li>Great at everything</li>
-  		</ul>
-      I'm Alex, and I've been plumbing as long as I can remember. You've got a piping problem? I'm your guy. I can fix anything, and I'm happy to do it!
-  		</div>
-	</div>
-	</td>
-
-	</tr>
-	</table>
+	
 
 	<p style="text-align:center" class="plumberPara">
-	All of our plumbers have their NCCER Certification and are Journey Level Pipefitters and Steamfitters. All of them have also passed their UPC Journeyman Plumber test. We have made it on Angie's List for 3 consecutive years for exellency in plumbing, and have 4.6 stars on Yelp! There is no competition in terms of quality and speed of service when it comes to Plumber Chat!
+		There is no competition in terms of quality and speed of service when it comes to PlumberPages!
 	</p>
 
   <p style="text-align:center" class="plumberPara">
   
   </p>
 
-	<footer>
-		Plumber Chat<br>
-		Address: 288 Boston Ave, Medford, MA, 02155<br>
-		Phone Number: 617-PLM-CHAT<br>
-		Email: plumberchat@gmail.com
-		We offer top plumbing services on a highly efficient platform<br>
-		Follow us on Linkedin!
+	<footer class="footer-distributed">
+	
+		<div class="footer-left">
+			<h4>Plumber Pages</h4>
+	
+			<p class="footer-links" style="font-size: 16px">
+				<a href="index.html">Home</a>
+				|
+				<a href="about.html">About</a>
+				|
+				<a href="questionaire.html">Appointments</a>
+				|
+				<a href="prices.html">Prices</a>
+				|
+				<a href="plumberpage.html">Our Plumbers</a>
+			</p>
+	
+			<p class="footer-company-name">© PlumberPages.com</p>
+		</div>
+	
+	
+	
+		<div class="footer-center">
+			<div class="geninfo">
+				<p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+			</div>
+			</br>
+	
+			<div class="geninfo">
+				<p>Phone Number: 617-PLUM-PAGE</p>
+			</div>
+			</br>
+			<div class="geninfo">
+				<p>Email: plumberPages@business.com</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<p class="footer-company-about">
+				We connect you with nearby plumbers!</p>
+			<div class="social-media">
+				Follow us on Facebook, Instagram, and Twitter!
+			</div>
+		</div>
 	</footer>
 
 </body>
